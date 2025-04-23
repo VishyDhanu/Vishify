@@ -1,7 +1,7 @@
 :root {
   --color-primary: rgb(207, 3, 3);
   --color-secondary: rgb(242, 95, 16);
-  --color-accent: rgb(247, 213, 20);
+  --color-accent: rgb(235, 201, 8);
   --color-heading: rgb(165, 164, 164);
   --color-body: #eae9eb;
 }
@@ -16,6 +16,8 @@ body {
   font-size: 2.4rem;
   line-height: 1.5;
 }
+
+/* Typography */
 
 h1,
 h2,
@@ -55,5 +57,34 @@ p {
 
   h3 {
     font-size: 2.4rem;
+  }
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+}
+
+.link-arrow {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.link-arrow::after {
+  content: "-->";
+  margin-left: 5px;
+  transition: margin 0.15s;
+}
+
+.link-arrow:hover::after {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .link-arrow {
+    font-size: 1.5rem;
   }
 }
